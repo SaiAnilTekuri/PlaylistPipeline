@@ -23,6 +23,9 @@ The **Spotify API** provides access to a variety of data, including:
 
 The extracted data is stored in **Amazon S3**, which acts as a scalable and secure storage solution for the raw data.
 
+<img width="960" alt="Screenshot 2025-01-28 224237" src="https://github.com/user-attachments/assets/fe53157a-9e29-40f6-8ae6-80f89c134c2b" />
+
+
 ---
 
 ## Step 2: Data Transformation
@@ -54,6 +57,9 @@ AWS Glue is a serverless ETL service that simplifies data transformation tasks. 
 - **Glue Jobs**: Created Glue Jobs to run the Spark transformation scripts. These jobs can be triggered by events (e.g., new data uploaded to S3) or scheduled at specific intervals.
 - **Glue Triggers**: Set up triggers to automate the ETL process, such as starting the transformation process when new data is uploaded to S3.
 
+  <img width="960" alt="Screenshot 2025-01-28 224506" src="https://github.com/user-attachments/assets/8647b23b-64a0-47b2-a994-58976de6894d" />
+
+
 ---
 
 ## Step 3: Data Loading
@@ -64,6 +70,12 @@ After transformation, the data is loaded into **Snowflake**, a cloud-based data 
 - The transformed data is first written back to **S3** in an optimized format.
 - Snowflake's **COPY INTO** command is used to load data from S3 into Snowflake tables.
 - Snowflake's automatic clustering and partitioning features ensure efficient data storage and fast querying.
+
+<img width="960" alt="Screenshot 2025-01-28 224342" src="https://github.com/user-attachments/assets/07dc93b6-f693-463a-a158-4b0a7044accd" />
+
+
+<img width="960" alt="Screenshot 2025-01-28 224548" src="https://github.com/user-attachments/assets/4c0c6059-2b73-43b5-83db-c607f3da8e4a" />
+
 
 ---
 
